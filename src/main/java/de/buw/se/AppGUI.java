@@ -16,10 +16,6 @@ public class AppGUI extends Application {
 
     @Override
     public void start(Stage stage) {
-        String javaVersion = System.getProperty("java.version");
-        String javafxVersion = System.getProperty("javafx.version");
-        Label label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-
         TextField textField = new TextField();
         Button loadBtn = new Button("Load Authors");
         loadBtn.setOnAction(e -> printAuthors(textField));
@@ -29,7 +25,7 @@ public class AppGUI extends Application {
         
         // add button and text field to the layout
         Pane layout = new VBox(2);
-        layout.getChildren().addAll(label, loadBtn, textField, addBtn);
+        layout.getChildren().addAll(loadBtn, textField, addBtn);
         Scene scene = new Scene(layout, 640, 480);
         stage.setScene(scene);
         stage.show();
