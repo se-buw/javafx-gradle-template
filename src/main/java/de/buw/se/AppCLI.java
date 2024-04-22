@@ -3,10 +3,35 @@
  */
 package de.buw.se;
 
+import java.util.Scanner;
+
 public class AppCLI  {
 
     public static void main(String[] args) {
-        System.out.println("Books in the DB ");
+        Scanner scanner = new Scanner(System.in);
+        int command = 1;
+        while(command != 0) {
+            switch (command) {
+                case 1:
+                    System.out.println("Authors in books DB ");
+                    System.out.println(DataStoreCsv.readAuthors());
+                    break;
+                case 2:
+                    System.out.println("Please enter author name");
+                    String author = scanner.nextLine();
+                    DataStoreCsv.addBook(author, "New Book Title");
+                    System.out.println("Author " + author + " added");
+                    System.out.println("Author " + author + " added");
+                    break;
+                default:
+                    System.out.println("Unknown command " + command);
+                    break;
+            }
+            System.out.println("Please enter next command (0 - quit, 1 - list authors, 2 - add author)");
+            command = Integer.parseInt(scanner.nextLine());
+        }
+        scanner.close();
     }
+
 
 }
