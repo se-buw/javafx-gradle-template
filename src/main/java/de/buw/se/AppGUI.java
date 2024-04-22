@@ -6,7 +6,6 @@ package de.buw.se;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -16,10 +15,14 @@ public class AppGUI extends Application {
 
     @Override
     public void start(Stage stage) {
+        // one text field to display authors and to add a new author
         TextField textField = new TextField();
+        
+        // button to load authors will call the printAuthors method
         Button loadBtn = new Button("Load Authors");
         loadBtn.setOnAction(e -> printAuthors(textField));
 
+        // button to add a new author will call the addBook method
         Button addBtn = new Button("Add Author");
         addBtn.setOnAction(e -> addBook(textField.getText()));
         
