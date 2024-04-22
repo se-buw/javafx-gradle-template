@@ -42,8 +42,9 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 
-sourceCompatibility = '15' //or '1.5' or '1.7', etc.
-
+java {
+    sourceCompatibility = JavaVersion.VERSION_15
+}
 
 run {
     standardInput = System.in
