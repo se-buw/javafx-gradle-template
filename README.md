@@ -1,6 +1,6 @@
 # javafx-gradle-template
 
-A template Java project simple applications using gradle and basic dependencies. It comes with:
+A Java template project for a simple applications using gradle and basic dependencies. It comes with:
 - a JavaFX demo for a Graphical User Interface (GUI)
 - a Command Line Interface (CLI) applications
 - an SQL databse to load and store Books (in the GUI application) 
