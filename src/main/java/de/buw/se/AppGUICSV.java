@@ -11,7 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class AppGUI extends Application {
+public class AppGUICSV extends Application {
 
     @Override
     public void start(Stage stage) {
@@ -39,7 +39,7 @@ public class AppGUI extends Application {
      * @param author
      */
     private void addBook(String author) {
-        DataStoreSql.addBook(author, "New Book");
+        DataStoreCsv.addBook(author, "New Book");
     }
 
     /**
@@ -47,7 +47,7 @@ public class AppGUI extends Application {
      * @param textField
      */
     private void printAuthors(TextField textField) {
-        String authors = DataStoreSql.readAuthors().toString();
+        String authors = DataStoreCsv.readAuthors().toString();
         textField.setText(authors);
     }
 

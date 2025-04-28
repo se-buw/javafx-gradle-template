@@ -11,26 +11,26 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
 
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:30.1.1-jre'
+    // A lib that adds usefull functionality to the app
+    implementation 'com.google.guava:guava:33.4.8-jre'
     
     // working with CSV files
     // https://github.com/eugenp/tutorials/tree/master/libraries-apache-commons-io
     // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
-    implementation 'org.apache.commons:commons-csv:1.10.0'
+    implementation 'org.apache.commons:commons-csv:1.14.0'
 
     // working with SQL databases
     // https://mvnrepository.com/artifact/com.h2database/h2
-    implementation 'com.h2database:h2:2.2.224'
+    implementation 'com.h2database:h2:2.3.232'
 
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'de.buw.se.AppGUI'
-    // mainClass = 'de.buw.se.AppCLI'
+    // mainClass = 'de.buw.se.AppGUICSV'
+    mainClass = 'de.buw.se.AppGUISQL'
 }
 
 tasks.withType(JavaCompile) {
@@ -38,12 +38,13 @@ tasks.withType(JavaCompile) {
 }
 
 javafx {
-    version = "21.0.1"
+    version = "21.0.7"
     modules = [ 'javafx.controls' ]
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_15
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 run {
