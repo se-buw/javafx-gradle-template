@@ -30,7 +30,6 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass = 'de.buw.se.AppGUI'
-    // mainClass = 'de.buw.se.AppCLI'
 }
 
 tasks.withType(JavaCompile) {
@@ -38,12 +37,14 @@ tasks.withType(JavaCompile) {
 }
 
 javafx {
-    version = "21.0.1"
+    // Align JavaFX with installed JDK 21 (classfile version 65)
+    // Use latest JavaFX 21 update for compatibility
+    version = "21.0.5"
     modules = [ 'javafx.controls' ]
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_15
+    sourceCompatibility = JavaVersion.VERSION_21
 }
 
 run {
