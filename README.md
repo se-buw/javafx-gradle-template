@@ -2,9 +2,7 @@
 
 A Java template project for a simple applications using gradle and basic dependencies. It comes with:
 - a JavaFX demo for a Graphical User Interface (GUI)
-- a Command Line Interface (CLI) applications
 - an SQL databse to load and store Books (in the GUI application) 
-- a CSV file demo to load and store Books (in the CLI application)
 
 Mix and match as needed.
 
